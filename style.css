@@ -1,0 +1,326 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Variables */
+:root {
+   --primary-text-color: #183b56;
+   --secondary-text-color:#577592;
+   --accent-color:#2294ed;
+    /* accent means supplementary */
+   --accent-color-dark: #1d69a3;
+   --padding-inline-section:20px;
+
+}
+body {
+    font-family: 'Poppins','sans-serif';
+    color:var(-primary-text-color);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size:1.5rem;
+}
+p {
+    font-family: 'Roboto','sans-serif';
+    font-size:1.25rem;
+    color:var(-secondary-text-color);
+    line-height:1.8rem;
+    
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    /* inline block allows us to set width and height and also it doesnt add line break */
+}
+li {
+    list-style: none;
+}
+
+/* UTILITY CLASSES */
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.container {
+    max-width: 1180px;
+    margin-inline:auto;
+    padding:var(-padding-inline-section);
+}
+.flex {
+    display:flex;
+    align-items: center;
+}
+.hover-link {
+    color: var(--primary-text-color);
+}
+.hover-link:hover {
+    color: var(--accent-color);  
+    transition: 0.2s ease-out;   
+}
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius:6px;
+    font-weight: 700;
+    color: white !important;
+    padding:12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+.secondary-button {
+    border:1px solid var(--secondary-text-color);
+    border-radius:6px;
+    font-weight: 700;
+    color:var(--secondary-text-color);
+    padding:12px 24px;
+    transition:0.2s ease-out;
+}
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    color:var(--accent-color)
+}
+
+
+/* TOP BANNER */
+.top-banner {
+    background-image: url('./assets/asset\ 32.png');
+    background-color: #4fb3d4;
+    background-size: 300px;
+}
+.banner-text {
+    color:white;
+    padding:15px 30px;
+    text-align:center;
+
+}
+/* NAV BAR */
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+    /* space between se first item start mai last item end mai */
+}
+.company-logo img {
+    width: 200px;
+}
+.nav-links {
+    flex-basis: 730px;
+    /* flex basis is used to set the width of the flexbox */
+}
+.nav-links ul {
+    justify-content: end;
+    /* justify content end se saare items right ke taraf rahenge */
+    /* float:right; */
+    gap:40px;
+}
+
+/* HEADER SECTION */
+.header {
+    padding:50px var(--padding-inline-section) 0;
+}
+.header-section {
+    justify-content: center;
+    gap:50px;
+}
+.header-left {
+    max-width:50vw;
+
+}
+.header-left h1{
+    margin-top:20px;
+}
+.header-left a {
+    margin-top: 10px;
+}
+.header-right img {
+    width:600px;
+}
+
+/* COMPANIES SECTION */
+.companies-header {
+    text-align: center;
+    margin:40px 30px;
+    color: var(--primary-text-color);
+
+}
+.companies-heading {
+    margin-bottom: 70px;
+}
+.logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo {
+    height:50px;
+}
+
+/* FEATURES SECTION */
+.features-section {
+    padding: 80px var(--padding-inline-section) 0;
+    /* background-image: url('assets\asset 40.png');
+    background-repeat: no-repeat;
+    background-position: center; */
+
+}   
+.features-header {
+    text-align: center;
+    margin: 40px;
+
+}
+.features-header h2 {
+    margin-bottom: 20px;
+    
+}
+.features-area {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:40px;
+    margin-top: 20px;
+}
+.features-card {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+/* BIG FEATURE */
+.big-feature-section {
+    padding:30px var(--padding-inline-section) 0;
+}
+.big-feature-container {
+    gap:50px;
+}
+.feature-img img {
+    width: 100%;
+}
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:50px;
+}
+.feature-desc h4{
+    color: var(--secondary-text-color);
+}
+.feature-desc h3{
+    color: var(--accent-color);
+}
+.feature-desc p{
+    color: var(--accent-color-dark);
+}
+.feature3-img {
+    height:50px;
+}
+.feature2-img {
+    height:50px;
+}
+.icon-img {
+    margin: 20px;
+}
+.person-name {
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* PRICING SECTION */
+.pricing-section {
+    padding:30px var(--padding-inline-section) 0;
+    background-color:var(--primary-text-color)
+}
+.pricing-container {
+    gap:60px;
+}
+.pricing-right img {
+    width: 100%;
+}
+.pricing-left h3 {
+    color:white;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.pricing-left p {
+    color: white;
+    margin-bottom: 15px;
+}
+.pricing-left ul,li,h4 {
+    color: #cdb3b3;
+}
+.pricing-left ul {
+    gap:40px;
+}
+.pricing-left li {
+    margin: 10px;
+}
+.pricing-left h4 {
+    margin-bottom: 20px;
+}
+/* CTA SECTION */
+.cta-section-container {
+    flex-direction: column;
+    gap: 40px;
+    color: var(--accent-color);
+}
+.cta-section {
+    background-color: white;
+    padding: 80px var(--padding-inline-section) 80px;
+}
+.cta-section p {
+    color:var(--accent-color-dark);
+    margin-top: 20px;
+}
+/* FOOTER-SECTION */
+.footer-section {
+    background-color:#bcd6ef;
+}
+.footer-container {
+    padding:80px var(--padding-inline-section);
+    justify-content: space-between;
+}
+/* .footer-container img {
+    margin-right: 50px;
+} */
+.footer
+.footer-container h3{
+    color: black;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.footer-container li {
+    color: #557681;
+    margin-bottom: 10px;
+    
+}
+.footer-item {
+    flex-direction: column;
+    align-items:flex-start;
+    gap:20px;
+}
+.footer-container {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* subfooter */
+.sub-footer {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+.sub-footer-container {
+    justify-content: center;
+    gap: 30px;
+}
+/* COPYRIGHT-SECTION */
+.copyright {
+    padding:var(--padding-inline-section);
+    background-color: #577592;
+    color:white;
+    text-align: center;
+}
